@@ -1,162 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kalculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
     <style>
-        @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
-        html,
         body {
-            height: 100%;
-            width: 100%;
-            font-family: "Roboto", sans-serif;
-        }
-
-        .button {
-            padding: 20px;
-            margin: 0 3px;
-            border: 2px solid black;
-            border-radius: 9px;
-            cursor: pointer;
-        }
-
-        /* 
-.container{
-    align-items: center;
-    justify-content: center;
-} */
-
-        .row {
-            margin: 8px 0;
-        }
-
-        .row input {
-            font-size: 23px;
+            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0px 38px;
-            border: 2px solid black;
-            border-radius: 9px;
+            padding: 20px;
+            background-color: #f4f4f4;
         }
-
-        .button {
-            font-weight: bolder;
-            font-size: large;
+        .portfolio-item {
+            margin-bottom: 20px;
         }
-
-        .text-center {
+        .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .portfolio-item a {
+            display: block;
             text-align: center;
+            margin: 10px 0;
+            color: #333;
+            text-decoration: none;
         }
-
-        .bg-red {
-            background-color: red;
-        }
-
-        .mx-auto {
-            margin: auto;
-        }
-
-        /* 
-.m-w-20{
-  max-width: 30vw;
-} */
-
-        .flex {
-            display: flex;
-        }
-
-        .flex-col {
-            flex-direction: column;
-        }
-
-        .items-center {
-            align-items: center;
+        .portfolio-item a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
-
 <body>
-    <h1 class="text-center">Welcome to Kalculator</h1>
-
-    <div class="container flex flex-col items-center mx-auto m-w-20">
-        <div class="row">
-            <input class="input" type="text" />
-        </div>
-
-        <div class="row">
-            <div class="sutton">
-                <button class="button">clear</button>
-                <!-- <button class="button">%</button> -->
-                <!-- <button class="button"></button> -->
-                <!-- <button class="button">*</button> -->
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="sutton">
-                <button class="button">7</button>
-                <button class="button">8</button>
-                <button class="button">9</button>
-                <button class="button">*</button>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="sutton">
-                <button class="button">4</button>
-                <button class="button">5</button>
-                <button class="button">6</button>
-                <button class="button">/</button>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="sutton">
-                <button class="button">1</button>
-                <button class="button">2</button>
-                <button class="button">3</button>
-                <button class="button">+</button>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="sutton">
-                <button class="button">0</button>
-                <button class="button">.</button>
-                <button class="button">=</button>
-                <button class="button">-</button>
-            </div>
-        </div>
+    <div class="portfolio-item">
+        <a href="https://4everlendingusa.com/" target="_blank">
+            <img src="path/to/your/image1.jpg" alt="4everlending USA">
+            https://4everlendingusa.com/
+        </a>
     </div>
-
-    <script>
-
-
-        let string = "";
-        let buttons = document.querySelectorAll(".button");
-
-        Array.from(buttons).forEach((button) => {
-            button.addEventListener("click", (e) => {
-                if (e.target.innerHTML == "=") {
-                    string = eval(string);
-                    document.querySelector("input").value = string;
-                } else if (e.target.innerHTML == "clear") {
-                    string = "";
-                    document.querySelector("input").value = string;
-                } else {
-                    console.log(e.target);
-                    string = string + e.target.innerHTML;
-                    document.querySelector("input").value = string;
-                }
-            });
-        });
-
-
-
-    </script>
+    <div class="portfolio-item">
+        <a href="https://khanekura.com/" target="_blank">
+            <img src="path/to/your/image2.jpg" alt="Khanekura">
+            https://khanekura.com/
+        </a>
+    </div>
+    <div class="portfolio-item">
+        <a href="https://thevistamails.com/" target="_blank">
+            <img src="path/to/your/image3.jpg" alt="The Vista Mails">
+            https://thevistamails.com/
+        </a>
+    </div>
 </body>
-
 </html>
